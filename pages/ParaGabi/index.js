@@ -27,15 +27,25 @@ function Form() {
         setSelectedOption(true);
     }
 
+    function createMessage() {
+        let message = 'Oi, vamos casar simmmmm!';
+        message += forms.louca ? '\n\n Eu aceito lavar toda a louça.' : '\n\n Disse que não, mas eu aceito lavar toda a louça.';
+        message += forms.clean ? '\n\n Eu aceito limpar toda a casa.' : '\n\n Disse que não, mas eu aceito limpar toda a casa.';
+        message += forms.internship ? '\n\n Eu aceito ir ao intercâmbio com você.' : '\n\n Disse que não, mas eu aceito ir ao intercâmbio com você.';
+        message += forms.love ? '\n\n Eu aceito dar e receber muito amor.' : '\n\n Disse que não, mas eu aceito dar e receber muito amor.';
+        message += forms.happy ? '\n\n Eu aceito ser muito feliz ao seu lado.' : '\n\n Disse que não, mas eu aceito ser muito feliz ao seu lado.';
+        return message;
+    }
+
     function handleSend() {
-        const message = 'Oi amor, vamos casar simmmmm! \n\n E eu aceito tudinho!';
+        const message = createMessage();
 
         window.location = `https://api.whatsapp.com/send?phone=+5511982384130&text=${message}`;
     }
 
 
     return (
-    <div style={{width: '100%', justifyContent: 'center', alignItems: 'center', height: windowHeight * 0.8, backgroundColor: 'orange'}}>
+    <div style={{width: '100%', justifyContent: 'center', alignItems: 'center', height: windowHeight * 0.8}}>
         {selectedOption ? <SecoundStep handleSend={handleSend} forms={forms} setForms={setForms} /> : <FirstStep handleClick={handleClick} /> }
     </div>
     )
