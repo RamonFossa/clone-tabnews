@@ -1,4 +1,4 @@
-import { ParaGabi } from './ParaGabi'
+import ParaGabi from './ParaGabi';
 
 
 export default function Home() {
