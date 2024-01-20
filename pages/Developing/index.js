@@ -13,7 +13,7 @@ export default function Developing() {
           backgroundColor: "black",
           justifyContent: "center",
           alignItems: "center",
-          padding: 15,
+          padding: 20,
         }}
       >
         <text
@@ -24,7 +24,7 @@ export default function Developing() {
             fontWeight: "bold",
           }}
         >
-          Em construção...
+          EM CONSTRUÇÃO...
         </text>
       </div>
     </div>
