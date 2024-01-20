@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "dev": "npx next dev",
-    "build": "npx next build"
+    "build": "npx next build",
+    "lint:check": "prettier --check .",
+    "lint:fix": "prettier --write ."
   },
   "author": "RamonFossa",
   "license": "MIT",
