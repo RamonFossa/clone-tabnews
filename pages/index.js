@@ -1,5 +1,5 @@
-import ParaGabi from "./ParaGabi";
+import Developing from "./Developing";
 
 export default function Home() {
-  return <ParaGabi />;
+  return <Developing />;
 }
